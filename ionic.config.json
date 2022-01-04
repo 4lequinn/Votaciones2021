@@ -1,0 +1,7 @@
+{
+  "name": "elecciones2021",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

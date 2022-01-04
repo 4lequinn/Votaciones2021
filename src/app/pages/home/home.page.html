@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+    <ion-toolbar class="toolbar">
+        <ion-title>
+            <ion-icon name="star"></ion-icon>
+            Votaciones 2021
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <main class="main">
+        <ion-list style="background: #000;">
+
+            <!-- ITEMS -->
+            <ion-item class="contenedor-item" *ngFor="let x of votos">
+                <ion-avatar slot="start">
+                    <img src="{{x.url}}" src="../../../assets/img/boric.png">
+                    <!-- [src]=""-->
+                </ion-avatar>
+                <ion-label class="contenedor-contenido">
+                    <div class="contenedor-candidato">
+                        <h1>{{x.nombre}}</h1>
+                    </div>
+                    <div class="contenedor-btn">
+                        <ion-button class="contenedor-btn__btn contenedor-btn__btn-active" (click)="mensaje(x.nombre,x.cantidad)">
+                            {{x.cantidad}}
+                        </ion-button>
+
+                        <!-- Botón +1 VOTO -->
+                        <ion-button class=" contenedor-btn__btn " (click)="agregarVoto(x.id)">
+                            <ion-icon name="add" color="success"></ion-icon>
+                        </ion-button>
+
+                        <ion-button class="contenedor-btn__btn " (click)="eliminarVoto(x.id)">
+                            <ion-icon name="remove" color="danger"></ion-icon>
+                        </ion-button>
+                    </div>
+                </ion-label>
+            </ion-item>
+
+        </ion-list>
+    </main>
+</ion-content>
+<ion-footer>
+    <div class="footer-votos ">
+        <p>Total de votos {{total}}</p>
+    </div>
+</ion-footer>

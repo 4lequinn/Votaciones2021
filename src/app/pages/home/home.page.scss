@@ -1,0 +1,58 @@
+.toolbar {
+    --background: var(--ion-color-flag-blue);
+    color: #fff;
+}
+
+.main {
+    height: 100%;
+    background: #000;
+}
+
+.footer-votos {
+    background: var(--ion-color-flag-blue);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.contenedor-item {
+    --background: #000;
+    background: none;
+}
+
+.contenedor-candidato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.contenedor-btn {
+    padding: 10px;
+}
+
+.contenedor-contenido {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    text-align: center;
+}
+
+.contenedor-btn__btn {
+    background: none;
+    --background: #000;
+    --border-radius: 20px;
+    border-radius: 20px;
+    height: 40px;
+    margin: 8px;
+}
+
+.contenedor-btn__btn-active {
+    --background: none;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
